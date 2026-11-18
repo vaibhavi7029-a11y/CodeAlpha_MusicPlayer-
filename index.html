@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeWave - Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player-container">
+
+    <header>
+        <h2>♫ VibeWave</h2>
+        <span>YOUR MUSIC. YOUR VIBE.</span>
+    </header>
+
+    <main class="player">
+
+        <div class="album-art" id="albumArt">
+            <span>♫</span>
+        </div>
+
+        <div class="song-info">
+            <h2 id="songTitle">Dreams</h2>
+            <p id="artistName">Artist Name</p>
+        </div>
+
+        <audio id="audio"></audio>
+
+        <!-- Progress bar -->
+        <div class="progress-section">
+            <input type="range" id="progress"
+                   value="0" min="0" max="100">
+
+            <div class="time">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <!-- Music controls -->
+        <div class="controls">
+            <button id="prevBtn" aria-label="Previous song">⏮</button>
+            <button id="playBtn" class="play-btn"
+                    aria-label="Play music">▶</button>
+            <button id="nextBtn" aria-label="Next song">⏭</button>
+        </div>
+
+        <!-- Volume -->
+        <div class="volume-section">
+            <span>🔊</span>
+            <input type="range" id="volume"
+                   min="0" max="1" step="0.01" value="0.7">
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist-section">
+            <h3>My Playlist</h3>
+            <div id="playlist"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Made with ♡ | CodeAlpha Frontend Internship</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
